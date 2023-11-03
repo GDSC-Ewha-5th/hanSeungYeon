@@ -1,0 +1,251 @@
+body{
+   margin-left: 60px;margin-right: 60px;
+}
+
+header{}
+
+/* velog 로고, search, 새 글 작성, 프로필 */
+header .top{
+   margin-top: 5px; margin-bottom: 50px;
+   /* background-color: lightblue; */
+   display: flex; flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items: center;
+}
+header .top h1{
+   font-size: 24px; font-weight: 600; font-family: Arial, Helvetica, sans-serif;
+}
+header .top .top-right-button{
+   display: flex;
+   align-items: center;
+}
+header .top .top-right-button .material-symbols-outlined{
+   font-size: 23px;
+   margin-right: 15px;
+}
+header .top .top-right-button #new-article{
+   font-size: 14px; font-weight: 600;
+   border: 1.5px solid #000000;
+   border-radius: 40px;
+   padding: 5px 15px;
+}
+header .top .top-right-button a img{
+   width: 35px;
+   border-radius: 50%;
+   margin-left: 13px;
+}
+header .top .top-right-button button{}
+header .top .top-right-button button .material-symbols-outlined{
+color: #676767; 
+width: 20px ;
+}
+
+
+/* 트렌딩, 최신, 검색 기간, 오른쪽 점 3개 */
+header .top-second{
+   /* background-color: lightcoral; */
+   display: flex; flex-flow: row nowrap;
+   justify-content: space-between;
+}
+
+header .top-second #top-second-left{
+   display: flex; flex-flow: row nowrap;
+}
+
+/* trending */
+header .top-second #top-second-left #trending{
+   display: flex; flex-flow: row nowrap;
+   align-items: center;
+   margin-right: 20px;
+   border-bottom: 1.5px solid #000000;
+   height: 30px; width: 90px;
+   padding-left:10px;
+   font-weight: 600;
+}
+header .top-second #top-second-left #trending .material-symbols-outlined{
+   margin-right: 3px;
+}
+
+
+/* recent */
+header .top-second #top-second-left #recent{
+   display: flex;flex-flow: row nowrap;
+   align-items: center;
+   margin-right: 15px;
+   height: 30px;
+   color: #676767;
+}
+header .top-second #top-second-left #recent .material-symbols-outlined{
+   margin-right: 3px;
+}
+
+
+
+/* dropdown */
+header .dropdown{
+   position: relative;
+   display: inline-block;
+}
+
+.dropDown:hover .subMenu {
+   display: none;
+   position: absolute;
+   z-index: 1; 
+}
+
+header .dropdown .dropdown-btn{
+   display: flex; 
+   align-items: center;
+   border: solid 1px #ececec; border-radius: 6px;
+   background-color: #ffffff;
+   color: #000000;
+   min-width: 8em;
+   padding: 10px 5px 10px 15px;
+   width: 130px; height: 32px;
+}
+
+header .dropdown .dropdown-btn .dropdown-today{
+   font-size: 12px; font-weight: bold;
+}
+
+
+header .dropdown .dropdown-btn .material-symbols-outlined{
+   margin-left: 45px;
+}
+
+.sub-menu {
+   /* display: none; 처음에 안보이게 */
+   width: inherit;
+   border: 1px solid #eee;
+}
+
+.sub-menu a {
+   display: block; /*a 태그는 가로배치 이므로 세로배치로 변경*/
+   padding: 7px;
+   text-align: center;
+   border: 0.5px solid #eee;
+   font-size: 13px; font-weight: bold;
+
+}
+
+.sub-menu a:hover {
+   background: #eee;
+}
+
+.sub-menu a:focus{
+   color: green;
+}
+
+/* 오른쪽 점 3개 */
+header .top-second a{}
+header .top-second a .material-symbols-outlined{
+   color: #676767;
+}
+
+
+/* main */
+.container{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin: 2em auto 0 auto;
+}
+
+.container .card:hover {
+   transform: translateY(-2%);
+   box-shadow: 0px 4px 15px 0px rgb(0 0 0 / 10%);
+ }
+ 
+.container .card{
+   /* background-color: lightgreen; */
+   margin-bottom: 1.4em;
+   width: calc(25% - 2em);
+   position: relative; 
+
+   box-shadow: 0px 4px 16px 0px rgb(0 0 0 / 4%);
+   background: white;
+   border-radius: 4px;
+   transform: translateY(0);
+   transition: all 0.2s ease-in 0s;
+}
+.container .card > img{
+   width: 100%;
+   height:12em;
+   object-fit: cover;
+   cursor: pointer;
+}
+.container .card > article{
+
+   font-size: 0.85em;
+   padding: 0.5em 1em 1em 1em;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   height: 15em;
+    
+}
+.container .card article h3{
+   margin-bottom: 0.3em;
+   font-size: 1.5em;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 100%;
+   white-space: nowrap;
+   
+   cursor: pointer;
+}
+.container .card article h3 a{
+   font-weight: bold; 
+}
+
+.card > article > card-title {
+   font-size: 1.2em;
+   font-weight: 500;
+   margin-bottom: 0.3em;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   width: 100%;
+   white-space: nowrap;
+   cursor: pointer;
+ }
+
+.container .card article p{
+   color: grey;
+   flex-grow: 1;
+   width: 95%;
+   text-overflow: ellipsis;
+   cursor: pointer;
+   margin-top: 0.5em;
+   font-size: 1.05em; font-weight: 600;
+   line-height: 1.2rem;
+}
+.container .card article footer{
+   font-weight: 600;
+   margin-top: 5em;
+   color: #a0a0a0;
+   font-size: 11px;
+}
+
+.container .card > footer{
+   /* background-color: lightpink; */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-top:#91919159 solid 0.5px;
+   margin: 5px 0;
+}
+
+.container .card footer .card-footer-author{
+   margin-left: 15px;margin-top: 5px; margin-bottom: 5px;
+   display: flex;
+   align-items: center;
+}
+.container .card footer .card-footer-author img{width: 25px; margin-right: 5px;}
+.container .card footer .card-footer-author .card-footer-author-text{
+   font-weight: 600; font-size: 13px;
+}
+.container .card footer .card-footer-like{
+   margin-right: 8px;
+   font-size: 13px; font-weight: 600;
+}
+.container .card footer .card-footer-like img{width: 10px;}

@@ -1,0 +1,22 @@
+body {
+   display: flex; flex-wrap: wrap;
+   width: 1000px;
+}
+ 
+.input {
+   /* background-color: lightblue; */
+   margin-left: 5px; padding: 2px;
+   border: none;
+   outline: 0;
+   width: 300px; font-size: 14px;
+}
+ 
+.tag {
+   display: inline-block;
+   margin: 0 5px; padding: 0 16px;
+   height: 30px;
+   background-color: #f2f2f2;
+   color:lightseagreen; font-size: 14px;
+   line-height: 1.8rem;
+   border-radius: 15px;
+}
